@@ -1,0 +1,47 @@
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+  position: relative;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+nav ul ul li {
+  float: none;
+  width: 200px;
+}
+
+nav ul ul a {
+  background: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  font-size: 12px;
+  padding: 5px 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+nav ul ul a:hover {
+  background: #e5e5e5;
+}
