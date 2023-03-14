@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Navigation/About Me">About Me</a></li>
+          <li><a href="Navigation/Portfolio Projects">Portfolio Projects</a></li>
+          <li><a href="Navigation/SCADA Expereince">SCADA Expereince</a></li>
+          <li><a href="Navigation/TechResume">Tech Resume</a></li>
+          <li><a href="Navigation/TechExperience">Tech Experience</a></li>
+          <li><a href="Navigation/Contact">Contact</a></li>
+        </ul>
+</nav>
