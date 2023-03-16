@@ -5,13 +5,13 @@ function showDropdown()
 }
 function hideDropdown() 
 {
-  var dropdown = document.getElementById("myDropdown");
+  var dropdown = document.getElementById("navDropdown");
   dropdown.style.display = "none";
 }
 
 window.onclick = function(event) 
 {
-  if (!event.target.matches('#myDropdown') && !event.target.matches('#showDropdownButton')) 
+  if (!event.target.matches('#navDropdown') && !event.target.matches('#showDropdown')) 
   {
     hideDropdown();
   }
