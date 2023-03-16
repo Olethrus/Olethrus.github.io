@@ -7,16 +7,18 @@
     <header>
       <h1>Welcome to My Website this section here will feature my photo top left and menu on top right the main body will be my resume with a download link</h1>
     </header>
-      <select id="css/navDropdown">
-          <option> value = <a href="index.html"></a>Home</option>
-          <option> value = <a href="Navigation/About Me"></a>About Me</option>
-          <option> value = "<a href="Navigation/Portfolio Projects"></a>"Portfolio Projects</option>
-          <option> value = <a href="Navigation/SCADA Expereince"></a>SCADA Expereince</option>
-          <option> value = <a href="Navigation/TechResume"></a>Tech Resume</option>
-          <option> value = <a href="Navigation/TechExperience"></a>Tech Experience</option>
-          <option> value = <a href="Navigation/Contact"></a>Contact</option>
-    </select>
-</nav>
+    <nav>
+      <label for="Navigation Menu">Menu</label>
+      <select id="Navigation Menu" onchange="location = this.value;">
+        <option value="">Choose a page</option>
+        <option value="index.html">Home</option>
+        <option value="Navigation/About Me">About</option>
+        <option value="Navigation/Portfolio Projects">"Portfolio Projects and System Architecture</option>
+        <option value="Navigation/SCADA Expereince">SCADA Expereince and Proficiancy</option>
+        <option value="Navigation/TechExperience">Technology Experience</option>
+      </select>
+    </nav>
   </body>
+    <h1>Place my CV here</h1>
   <!script>
 </html>
