@@ -8,20 +8,32 @@
 <body>
   <header>
     <h1>Welcome to My Website this section here will feature my photo top left and menu on top right the main body will be my resume with a download link</h1>
-  </header>
+ 	        <style>
+            iframe {
+                height:200px;
+                width:400px;
+                background-color:lightgreen;
+            }
+            h1 {
+                color:green;
+            }
+            body {
+                text-align:center;
+            } 
+</header>
   
   <nav>
       <label for="NavigationMenu">Navigation Menu</label>
-      <select name = NavigationMenu id="NavigationMenu" onchange= this.value>      
+      <select name = NavigationMenu id="NavigationMenu" onchange = "document.getElementById('result').innerHTML = this.value;">      
         <option value="">Choose a page</option>
-        <option value= <iframe src = "https://olethrus.github.io/Navigation/CV.html"></iframe>Home</option>
-        <option value= <iframe src = "https://olethrus.github.io/Navigation/About Me.html"></iframe>About</option>
-        <option value= <iframe src = "https://olethrus.github.io/Navigation/Portfolio Projects.html"></iframe>Portfolio Projects and System Architecture</option>
-        <option value= <iframe src = "https://olethrus.github.io/Navigation/SCADA Expereince.html"></iframe>SCADA Expereince and Proficiancy</option>
-        <option value= <iframe src = "https://olethrus.github.io/Navigation/TechExperience.html"></iframe>Technology Experience</option>
+        <option value= '<iframe src = "https://olethrus.github.io/Navigation/CV.html" width="100%"></iframe>'>Home</option>
+        <option value= '<iframe src = "https://olethrus.github.io/Navigation/About Me.html" width="100%"></iframe>'>About</option>
+        <option value= '<iframe src = "https://olethrus.github.io/Navigation/Portfolio Projects.html" width="100%"></iframe>'>Portfolio Projects and System Architecture</option>
+        <option value= '<iframe src = "https://olethrus.github.io/Navigation/SCADA Expereince.html" width="100%"></iframe>'>SCADA Expereince and Proficiancy</option>
+        <option value= '<iframe src = "https://olethrus.github.io/Navigation/TechExperience.html" width="100%"></iframe>'>Technology Experience</option>
       </select>
     </nav>
-<iframe src = "Navigation/SCADA Expereince.html"></iframe>
+<div id=result></div>
 </body>
 
 </html>
