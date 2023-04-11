@@ -22,7 +22,7 @@ text-align: center;}
 tfoot {color:red;
 text-align: center;}
 </style>
-  <title>William Sylvester AVEVA DataHub Experience</title>
+  <title>William Sylvester Industry Experience</title>
 </head>
 <h1>William Sylvester: Interstates</h1>
 <h4>AVEVA/Schneider Alliance Partner<br>Rockwell Platinumn Partner<br>AVEVA/Schneider SME <br><a href="https://mysocialmaster.com/WilliamSly">Contact Info</a></h4>
@@ -31,38 +31,63 @@ text-align: center;}
 <table class = center>
 <thead>
   <tr>
-    <th>Skill Name</thh>
-    <th>Skill Decription</th>
-    <th>Example Experience</th>
-			<th> Reference material</th>
+    <th>Industry Type</thh>
+    <th>Application Overview</th>
+    <th>Concepts used or deployed</th>
+			<th> Lessons learned </th>
 			<th> Refernce documents</th>
-    <th>Industry Example Experience</th>
-    <th>In progress?</th>
-    <th>Weight %</th>
+    <th>Reasearch or Deployed</th>
 
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Skill Completed</a></td>
+    <td>Recieveing & Loadout Facility</td>
+    <td>This facility would recieve, store, dry and then load out product.</td>
+    <td>We used a CMC web server integrated into a Allen bradley PLC that made use of a Redlion as a gateway to translate the modbus TCP protocol to the AB PLC. At another similar facility we removed the red lion and talked directly to the PLC using a rockwell modbus TCP block. At another plant we used kepware to interface M340 with a Rockwell SE application.</td>
+			<td>Depending on the product a lot of times sites willl tend to want to stop the conveyors loaded and not clean out. This minimizes downtime to get product moving again.</td>
+    <td></td>
+    <td>Deployed</td>
+  </tr>
+  <tr>
+    <td>HVAC System for a Chemical Plant</td>
+    <td>This facility would produce chemicals. We were in charge of keeping everything cool, exhausting or containing chemicals in the event of a leak or keeping things from freezing.</td>
+    <td>We used the modbus TCP block here to talk to an OEM controller to tell AC Units to start stop and read some status values.</td>
+			<td></td>
+    <td></td>
+			<td>Deployed</td>
+			
+  </tr>
+  <tr>
+    <td>Pet Food processing Facility</td>
+    <td>This facility would process and color pet food and then run it through an extruder.</td>
+    <td>We made use of PlantPAX controls along with a simple from scratch batching routine that we developed.</td>
+			<td>The heat created can be to much for a workstation to handle had to add an additional cooler to the panel in order for the application to run smoothly.</td>
+    <td></td>
+    <td>Deployed</td>
+  </tr>
+  <tr>
+    <td>Packaging Facility</a></td>
+    <td>We had to quickly move and dose a system that would then package a container that needed high accuracy.</td>
+    <td>We used multiple servoes here to calculate the weight needed and based off a static value does the system with in a reasonable tollerance.</td>
+			<td></td>
+    <td></td>
+    <td>Deployed</td>
+  </tr>
+  <tr>
+    <td>Rendering Facility</a></td>
     <td></td>
     <td></td>
 			<td></td>
-    <td></td>
-    <td></td>
-    <td></td>
     <td></td>
   </tr>
 </tbody>
 <tfoot>
 	<tr>
-    <td>Skill in progess or not working on</td>
-    <td></td>
+    <td>Fabrication Facility</td>
+    <td>We had to move product to assemble thinks within a specific tolerance.</td>
     <td></td>
 			<td></td>
-    <td></td>
-    <td></td>
-    <td></td>
     <td></td>
 
 	</tr>
