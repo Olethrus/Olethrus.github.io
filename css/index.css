@@ -1,0 +1,68 @@
+h1 {text-align: center;}
+h4 {text-align: center;}
+a:link,a:visited{
+	color:white;
+	text-decoration: none;
+	text-align: middle;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: -10px;
+	padding-bottom: 10px;
+	font-size:15px;
+	border: black 3px solid;
+	background-color: black;
+	
+}
+
+ul{
+	list-style: none;
+}
+li{
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	font-size:15px;
+}
+div.row1relativeleft
+{
+	position: relative;
+	top:5px;
+	left:30px;
+	width: 400px;
+}
+div.row1relativecenter
+{
+	position: relative;
+	top: -500px;;
+	left:450px;
+	width: 475px;
+}div.row1relativeright
+{
+	position: relative;
+	left:945px;
+	top: -920px;
+	width: 450px;
+}
+div.row2relativeleft
+{
+	position: relative;
+	top: -790px;
+	left: 30px;
+	width: 400px;
+}
+div.row2relativecenter
+{
+	position: relative;
+	top: -1240px;;
+	left:450px;
+	width: 475px;
+}div.row2relativeright
+{
+	position: relative;
+	left:945px;
+	top: -1590px;
+	width: 450px;
+}
+progress{
+	padding-left: 50px;
+}
