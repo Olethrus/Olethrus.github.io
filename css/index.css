@@ -1,5 +1,10 @@
-h1 {text-align: center;}
-h4 {text-align: center;}
+h1 {text-align: center;
+	color:white;}
+h2 {text-align:center;
+	color:white;}
+h4 {text-align: center;
+	color:white;}
+p {color:white;}
 a:link,a:visited{
 	color:white;
 	text-decoration: none;
