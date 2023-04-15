@@ -71,3 +71,8 @@ div.row2relativecenter
 progress{
 	padding-left: 50px;
 }
+div.profile
+{
+	position: relative;
+	top:-800px;
+}
