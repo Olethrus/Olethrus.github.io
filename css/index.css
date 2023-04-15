@@ -38,27 +38,27 @@ div.row1relativeleft
 div.row1relativecenter
 {
 	position: relative;
-	top: -500px;;
+	top: -600px;;
 	left:450px;
 	width: 475px;
 }div.row1relativeright
 {
 	position: relative;
 	left:945px;
-	top: -920px;
+	top: -1020px;
 	width: 450px;
 }
 div.row2relativeleft
 {
 	position: relative;
-	top: -790px;
+	top: -890px;
 	left: 30px;
 	width: 400px;
 }
 div.row2relativecenter
 {
 	position: relative;
-	top: -1240px;;
+	top: -1340px;;
 	left:450px;
 	width: 475px;
 }div.row2relativeright
