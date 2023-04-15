@@ -38,7 +38,7 @@ div.row1relativeleft
 div.row1relativecenter
 {
 	position: relative;
-	top: -600px;;
+	top: -300px;;
 	left:450px;
 	width: 475px;
 }div.row1relativeright
@@ -51,7 +51,7 @@ div.row1relativecenter
 div.row2relativeleft
 {
 	position: relative;
-	top: -890px;
+	top: -590px;
 	left: 30px;
 	width: 400px;
 }
