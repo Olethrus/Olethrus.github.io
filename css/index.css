@@ -74,6 +74,8 @@ progress{
 div.profile
 {
 	position: absolute;
-	top:8px;
-  left:8px;
+	top:20px;
+  left:20px;
+  height: 225px;
+ width: 225px;
 }
