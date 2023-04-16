@@ -32,41 +32,41 @@ div.row1relativeleft
 	position: absolute;
 	top:200px;
 	left:30px;
-	width: 400px;
+	width: 550px;
 }
 div.row1relativecenter
 {
 	position: absolute;
 	top: 200px;
-	left:450px;
-	width: 475px;
+	left:600px;
+	width: 550px;
 }
 div.row1relativeright
 {
 	position: absolute;
 	top: 200px;
- left:945;
-	width: 450px;
+ left:1095;
+	width: 550px;
 }
 div.row2relativeleft
 {
 	position: absolute;
 	top: 940px;
 	left: 30px;
-	width: 400px;
+	width: 550px;
 }
 div.row2relativecenter
 {
 	position: absolute;
 	top: 680px;
-	left:450px;
-	width: 475px;
+	left:600px;
+	width: 550px;
 }div.row2relativeright
 {
 	position: absolute;
-	left:925px;
+	left:1095px;
 	top: 600px;
-	width: 450px;
+	width: 550px;
 }
 progress{
 	padding-left: 50px;
