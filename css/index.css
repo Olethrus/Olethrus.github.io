@@ -52,7 +52,7 @@ div.row1relativeright
 div.row2relativeleft
 {
 	position: absolute;
-	top: 600px;
+	top: 800px;
 	left: 30px;
 	width: 400px;
 }
@@ -75,12 +75,12 @@ progress{
 div.profile
 {
 	position: absolute;
-	top:60px;
+	top:40px;
   left:20px;
   height: 175px;
  width: 175px;
 }
 div.willheader
 {
-left : 200px;
+left : 400px;
 }
