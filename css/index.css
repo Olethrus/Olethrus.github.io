@@ -80,3 +80,7 @@ div.profile
   height: 225px;
  width: 225px;
 }
+div.header
+{
+left : 200px;
+}
