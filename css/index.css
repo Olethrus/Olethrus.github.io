@@ -52,7 +52,7 @@ div.row1relativeright
 div.row2relativeleft
 {
 	position: absolute;
-	top: 800px;
+	top: 1300px;
 	left: 30px;
 	width: 400px;
 }
@@ -82,5 +82,5 @@ div.profile
 }
 div.willheader
 {
-left : 400px;
+left : 900px;
 }
