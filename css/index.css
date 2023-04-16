@@ -51,14 +51,14 @@ div.row1relativeright
 div.row2relativeleft
 {
 	position: absolute;
-	top: 900px;
+	top: 940px;
 	left: 30px;
 	width: 400px;
 }
 div.row2relativecenter
 {
 	position: absolute;
-	top: 640px;
+	top: 680px;
 	left:450px;
 	width: 475px;
 }div.row2relativeright
