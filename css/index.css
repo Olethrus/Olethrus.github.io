@@ -51,7 +51,7 @@ div.row1relativeright
 div.row2relativeleft
 {
 	position: absolute;
-	top: 1000px;
+	top: 900px;
 	left: 30px;
 	width: 400px;
 }
