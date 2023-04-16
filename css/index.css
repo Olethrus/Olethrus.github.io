@@ -82,10 +82,10 @@ div.profile
 div.header2
 {
 	position: absolute;
-	top:40px;
+	top:0px;
   left:200px;
-  height: 350px;
- width: 350px;
+  height: 200px;
+ width: 400px;
 	border : black 2px solid;
 }
 
