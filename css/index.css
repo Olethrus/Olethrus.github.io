@@ -79,6 +79,15 @@ div.profile
   height: 175px;
  width: 175px;
 }
+div.header2
+{
+	position: absolute;
+	top:40px;
+  left:250px;
+  height: 175px;
+ width: 175px;
+}
+
 div.willheader
 {
 	position: absolute;
