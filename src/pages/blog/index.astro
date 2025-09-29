@@ -1,0 +1,23 @@
+---
+import Layout from '../../components/Layout.astro';
+
+const posts = [
+  {
+    slug: 'welcome',
+    title: 'Welcome',
+    description: 'Why this site exists and what you can expect.',
+    date: '2025-09-27'
+  },
+];
+---
+<Layout title="Blog — William Controls" description="Notes on controls, SCADA, UNS, and AI.">
+  <h1>Blog</h1>
+  <ul>
+    {posts.map(post => (
+      <li>
+        <a href={`/blog/${post.slug}`}>{post.title}</a> — <small>{post.date}</small><br />
+        {post.description}
+      </li>
+    ))}
+  </ul>
+</Layout>
