@@ -1,0 +1,32 @@
+---
+const techs = Array.from({ length: 8 }, (_, i) => ({
+  label: `Tech ${i + 1}`,
+  vendors: ['Vendor 1', 'Vendor 2']
+}));
+---
+<header>
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="/" style="font-weight:700;">William Controls</a>
+      <nav style="display:flex;gap:1rem;">
+        <a href="/about">About</a>
+        {techs.map(tech => (
+          <details>
+            <summary>{tech.label}</summary>
+            <ul style="list-style:none;margin:0;padding-left:1rem;">
+              {tech.vendors.map(vendor => (
+                <li><a href={`/${tech.label.toLowerCase().replace(' ','-')}/${vendor.toLowerCase().replace(' ','-')}`}>{vendor}</a></li>
+              ))}
+            </ul>
+          </details>
+        ))}
+      </nav>
+    </div>
+    <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
+      <a href="mailto:someone@example.com">Email</a>
+      <a href="https://calendly.com/">Schedule</a>
+      <a href="https://www.tiktok.com/">TikTok</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
+    </div>
+  </div>
+</header>
