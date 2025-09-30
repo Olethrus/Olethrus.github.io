@@ -1,0 +1,13 @@
+---
+import Layout from '../../components/Layout.astro';
+
+const content = {
+  title: 'Welcome',
+  body: 'Shipping a lean, fast site on GitHub Pages with a clear path to business scale.'
+};
+---
+
+<Layout title={`${content.title} — Blog`}>
+  <h1>{content.title}</h1>
+  <p>{content.body}</p>
+</Layout>
