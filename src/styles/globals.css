@@ -9,3 +9,19 @@ footer{margin-top:3rem;padding:1rem 0;color:#666}
 .grid{display:grid;gap:1rem}
 @media (min-width: 900px){.grid-3{grid-template-columns:repeat(3,1fr)}}
 .card{border:1px solid #eee;border-radius:8px;padding:1rem;background:#fff}
+
+
+/* Hide default marker and add custom arrows for nav dropdowns */
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary::after {
+  content: " \25B2";
+}
+details:not([open]) summary::after {
+  content: " \25BC";
+}
