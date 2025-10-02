@@ -21,7 +21,14 @@ const techs = [
             <summary>{tech.label}</summary>
             <ul style="list-style:none;margin:0;padding-left:1rem;">
               {tech.vendors.map(vendor => (
-                <li><a href={`/${tech.label.toLowerCase().replace(' ','')}/${vendor.toLowerCase().replace(' ','')}`}>{vendor}</a></li>
+                <li><a href={`/${tech.label
+                    .toLowerCase()
+                    .replace(/[\s.]+/g, '-')}/${vendor
+                    .toLowerCase()
+                    .replace(/[\s.]+/g, '-')}`}>
+                    {vendor}
+                    </a>
+                </li>
               ))}
             </ul>
           </details>
