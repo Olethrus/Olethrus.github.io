@@ -1,7 +1,7 @@
 ---
 const techs = Array.from({ length: 8 }, (_, i) => ({
-  label: `Tech${i + 1}`,
-  vendors: ['Vendor1', 'Vendor2']
+  label: `Tech ${i + 1}`,
+  vendors: ['Vendor 1', 'Vendor 2']
 }));
 ---
 <header>
@@ -15,7 +15,7 @@ const techs = Array.from({ length: 8 }, (_, i) => ({
             <summary>{tech.label}</summary>
             <ul style="list-style:none;margin:0;padding-left:1rem;">
               {tech.vendors.map(vendor => (
-                <li><a href={`/${tech.label.toLowerCase().replace(' ','-')}/${vendor.toLowerCase().replace(' ','-')}`}>{vendor}</a></li>
+                <li><a href={`/${tech.label.toLowerCase().replace(' ','')}/${vendor.toLowerCase().replace(' ','')}`}>{vendor}</a></li>
               ))}
             </ul>
           </details>
