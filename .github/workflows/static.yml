@@ -1,9 +1,0 @@
-# Deprecated static workflow - disabled
-name: Disabled static content deployment
-on:
-  workflow_dispatch:
-jobs:
-  noop:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Static workflow disabled"
