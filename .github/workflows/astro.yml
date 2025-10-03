@@ -20,34 +20,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # NOTE: no "cache: npm" here, so no lockfile is required
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
-      # Install deps if present (handles both with/without lockfile)
-      - name: Install dependencies (lockfile-aware)
+      # Install deps if present (works with or without lockfile)
+      - name: Install dependencies
         run: |
-          if [ -f package-lock.json ]; then
-            echo "Using npm ci (lockfile found)"; npm ci
-          elif [ -f package.json ]; then
-            echo "Using npm install (no lockfile)"; npm install
+          if [ -f package.json ]; then
+            if [ -f package-lock.json ]; then
+              echo "Using npm ci (lockfile found)"; npm ci
+            else
+              echo "Using npm install (no lockfile)"; npm install
+            fi
           else
-            echo "No package.json found"; exit 1
+            echo "ERROR: No package.json found at repo root"; exit 1
           fi
 
-      # Ensure Astro is available even if not listed in devDependencies
+      # Ensure Astro CLI is available even if not listed in devDependencies
       - name: Ensure Astro CLI is available
         run: |
           if [ ! -x node_modules/.bin/astro ]; then
-            echo "Astro not in node_modules - installing temporarily"
+            echo "Astro not found in node_modules - installing temporarily"
             npm install --no-save astro@latest
           fi
 
       # Build using your script if it exists; otherwise call the CLI directly
       - name: Build
         run: |
-          if node -e "console.log(require('./package.json').scripts?.build ? 'yes':'no')" | grep -q yes; then
+          if node -e "console.log(require('./package.json').scripts?.build ? 'yes' : 'no')" | grep -q yes; then
             npm run build
           else
             npx astro build
