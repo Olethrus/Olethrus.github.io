@@ -1,36 +1,32 @@
 name: Deploy Astro to GitHub Pages
-
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: withastro/action@v2
+      - uses: actions/setup-node@v4
         with:
-          package-manager: npm     # ✅ tells the action to use npm without a lockfile
           node-version: 20
-          path: .
-
+          cache: npm
+      - name: Install deps
+        run: npm ci || npm i
+      - name: Build
+        run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-
   deploy:
     runs-on: ubuntu-latest
     needs: build
