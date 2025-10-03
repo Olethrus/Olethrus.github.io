@@ -1,32 +1,69 @@
 name: Deploy Astro to GitHub Pages
+
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      - name: Install deps
-        run: npm ci || npm i
+
+      # Install deps if present (handles both with/without lockfile)
+      - name: Install dependencies (lockfile-aware)
+        run: |
+          if [ -f package-lock.json ]; then
+            echo "Using npm ci (lockfile found)"; npm ci
+          elif [ -f package.json ]; then
+            echo "Using npm install (no lockfile)"; npm install
+          else
+            echo "No package.json found"; exit 1
+          fi
+
+      # Ensure Astro is available even if not listed in devDependencies
+      - name: Ensure Astro CLI is available
+        run: |
+          if [ ! -x node_modules/.bin/astro ]; then
+            echo "Astro not in node_modules - installing temporarily"
+            npm install --no-save astro@latest
+          fi
+
+      # Build using your script if it exists; otherwise call the CLI directly
       - name: Build
-        run: npm run build
+        run: |
+          if node -e "console.log(require('./package.json').scripts?.build ? 'yes':'no')" | grep -q yes; then
+            npm run build
+          else
+            npx astro build
+          fi
+
+      # Optional: show what's in dist for quick debugging
+      - name: Show dist contents
+        run: |
+          echo "----- dist tree -----"
+          find dist -maxdepth 2 -type f -print
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
