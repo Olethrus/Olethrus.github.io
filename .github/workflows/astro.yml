@@ -19,14 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 20
-          cache: npm
+
       # Install deps if present (handles both with/without lockfile)
       - name: Install dependencies (lockfile-aware)
         run: |
@@ -55,7 +53,6 @@ jobs:
             npx astro build
           fi
 
-      # Optional: show what's in dist for quick debugging
       - name: Show dist contents
         run: |
           echo "----- dist tree -----"
